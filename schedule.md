@@ -1,6 +1,7 @@
-# ================
-## course order
-# ================
+## learn order
+
+```sh
+this is a recommended structure for beginners
 
 > 1. introduction
 > 2. data
@@ -16,3 +17,4 @@
 > 12. file_handling
 > 13. read and write
 > 14. memory-management
+```
