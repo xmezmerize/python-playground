@@ -1,6 +1,8 @@
 from math import pow, sqrt, floor, ceil
 from fractions import Fraction
-from numpy import polyadd, polysub
+from numpy import polyadd, polysub, polymul, polydiv
+from sympy.abc import x
+from sympy import factor
 
 """
 Operações abordadas nesse arquivo:
@@ -114,14 +116,24 @@ print(f"multiplicação de fração: {multiplicacao_f}")
 print(f"divisão de fração: {divisao_f}")
 print("\n")
 
-# operações com polinômios
+# 5. operações com polinômios
 
 coeficiente_pol1 = [3, 2, -1] # define 3x**2 + 2x -1
 coeficiente_pol2 = [4, -1, 3] # define 4x**2 -x + 3
 
 soma_pol = polyadd(coeficiente_pol1, coeficiente_pol2)
 subtracao_pol = polysub(coeficiente_pol1, coeficiente_pol2)
+multi_pol = polymul(coeficiente_pol1, coeficiente_pol2)
+div_pol = polydiv(coeficiente_pol1, coeficiente_pol2)
 
 print(f"os números escolhidos foram: polinômio A ({coeficiente_pol1}) e polinômio B ({coeficiente_pol2})")
 print(f"soma dos polinômios: {soma_pol}")
 print(f"subtração dos polinômios: {subtracao_pol}")
+print(f"multiplicação dos polinômios: {multi_pol}")
+print(f"divisão dos polinômios: {div_pol}")
+print("\n")
+
+# 6. fatoração de polinômios
+
+resultado = factor(x**2 + 3*x)
+print(resultado)
